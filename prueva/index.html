@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+<title>Nuestro Aniversario</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= PÁGINA 1: cielo + pergamino ================= -->
+<div id="pagina1" class="pagina activa">
+  <div class="cielo" id="cielo">
+    <div class="fugaz" style="top:14%; left:75%; animation-delay:0s;"></div>
+    <div class="fugaz" style="top:32%; left:25%; animation-delay:1s; width:80px;"></div>
+    <div class="fugaz" style="top:8%;  left:50%; animation-delay:1.9s; width:95px;"></div>
+    <div class="fugaz" style="top:45%; left:85%; animation-delay:2.6s; width:70px;"></div>
+  </div>
+
+  <div id="textoIntro" class="texto-intro">Así empezó todo... hace dos años ❤️</div>
+
+  <button id="btnAbrir" class="btn">Abrir</button>
+
+  <div id="pergaminoCaja" class="pergamino-caja">
+    <div class="vara"></div>
+    <div class="rollo-wrap" id="rolloWrap">
+      <div class="rollo-contenido" id="cartaTexto"></div>
+    </div>
+    <div class="aviso-scroll" id="avisoScroll">↓ desliza para leer más</div>
+    <div class="vara"></div>
+    <button id="btnSiguiente" class="btn">Siguiente</button>
+  </div>
+</div>
+
+<script>
+/* =========================================================
+   TEXTO DE LA CARTA — Editá acá lo que quieras cambiar
+   ---------------------------------------------------------
+   - "TEXTO_CARTA": el texto que aparece en el pergamino.
+     Dejá una línea en blanco donde quieras un salto de
+     párrafo. Podés poner **así** alrededor de una palabra
+     o frase para que salga en negrita.
+   - Si la carta es larga, el pergamino no crece más de la
+     mitad de la pantalla: se lee con scroll dentro de la
+     cajita, con un aviso de "desliza para leer más".
+   - "FIRMA_CARTA": la frase final, en cursiva, debajo
+     de la carta.
+   - El botón "Siguiente" lleva a pagina2.html.
+   ========================================================= */
+const TEXTO_CARTA =
+`**Hace 2 años empezó todo… ❤️**
+
+Hace dos años me hiciste el hombre más feliz del mundo. Desde aquel momento, mi niña, has sido una parte demasiado importante de mi vida.
+
+Ti amo muchísimo. ❤️ Sé que a veces no soy el mejor, que quizá no siempre le doy todo lo que mereces y que puedo cometer errores, pero quiero que sepa que de verdad ti amo con todo mi corazón y con todo mi ser.
+
+Espero poder estar siempre a su lado, acompañarla, hacerla sonreír y seguir compartiendo muchos momentos con, mi niña hermosa. 🥺❤️
+
+Espero que le guste este pequeño detalle que hice con muchísimo amor… y también con bastante paciencia JAJAJA. Lo hice pensando únicamente en mi niña y espero que, al verlo, puedas sentir aunque sea un poquito de todo el amor que puse en cada parte.
+
+Todo esto es para mi niña tikita, hermosa, linda, preciosa, inigualable… una diosa sin igual. ❤️‍🩹
+
+**Te amo muchísimo, mi niña.**
+Gracias por estos dos años y por formar parte de mi vida.
+
+**Feliz aniversario, mi amor. ❤️🌷**
+`;
+
+const FIRMA_CARTA = "Con amor su niño";
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>

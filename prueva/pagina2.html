@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+<title>Nuestro Aniversario</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= PÁGINA 2: jardín de tulipanes bajo las estrellas ================= -->
+<div id="pagina2" class="pagina activa">
+
+  <!-- Piezas SVG compartidas: cada tulipán reutiliza estas mismas piezas,
+       así que todos son idénticos entre sí (solo cambia su posición). -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="petalSideWhite" x1="0" y1="1" x2="0" y2="0">
+        <stop offset="0%" stop-color="#c9d4e6"/>
+        <stop offset="55%" stop-color="#eef3fa"/>
+        <stop offset="100%" stop-color="#ffffff"/>
+      </linearGradient>
+      <linearGradient id="petalCenterWhite" x1="0" y1="1" x2="0" y2="0">
+        <stop offset="0%" stop-color="#dbe8fb"/>
+        <stop offset="45%" stop-color="#f3f8ff"/>
+        <stop offset="100%" stop-color="#ffffff"/>
+      </linearGradient>
+      <linearGradient id="petalSideBlue" x1="0" y1="1" x2="0" y2="0">
+        <stop offset="0%" stop-color="#2b7fc4"/>
+        <stop offset="55%" stop-color="#6cc0f2"/>
+        <stop offset="100%" stop-color="#d8f1ff"/>
+      </linearGradient>
+      <linearGradient id="petalCenterBlue" x1="0" y1="1" x2="0" y2="0">
+        <stop offset="0%" stop-color="#57a8e6"/>
+        <stop offset="45%" stop-color="#a9dcff"/>
+        <stop offset="100%" stop-color="#eaf8ff"/>
+      </linearGradient>
+      <linearGradient id="stemGrad" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#1f6b34"/>
+        <stop offset="50%" stop-color="#3aa457"/>
+        <stop offset="100%" stop-color="#1f6b34"/>
+      </linearGradient>
+      <linearGradient id="leafGrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#4fc26c"/>
+        <stop offset="100%" stop-color="#1f6b34"/>
+      </linearGradient>
+      <path id="lobe" d="M0,0 C-18,-6 -27,-32 -20,-58 C-15,-76 -6,-85 0,-87
+                         C6,-85 15,-76 20,-58 C27,-32 18,-6 0,0 Z"/>
+      <filter id="tulipGlow" x="-80%" y="-80%" width="260%" height="260%">
+        <feGaussianBlur stdDeviation="4.2" result="blur"/>
+        <feMerge>
+          <feMergeNode in="blur"/>
+          <feMergeNode in="blur"/>
+          <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+      </filter>
+      <g id="stemLeaves">
+        <path d="M0,0 C -5,60 5,130 0,190" stroke="url(#stemGrad)" stroke-width="7" fill="none" stroke-linecap="round"/>
+        <path d="M0,90 C -40,84 -66,110 -75,146 C -46,138 -16,120 0,102 Z" fill="url(#leafGrad)"/>
+        <path d="M-6,98 C -32,110 -52,126 -68,144" stroke="#164d26" stroke-width="1.4" fill="none" opacity="0.55"/>
+        <path d="M0,122 C 32,117 55,142 61,172 C 34,163 10,148 0,134 Z" fill="url(#leafGrad)" opacity="0.95"/>
+        <path d="M5,128 C 26,135 44,150 56,168" stroke="#164d26" stroke-width="1.3" fill="none" opacity="0.5"/>
+      </g>
+    </defs>
+  </svg>
+
+  <div class="cielo fugaces-activas" id="cielo2">
+    <div class="fugaz" style="top:10%; left:70%; animation-delay:0s;"></div>
+    <div class="fugaz" style="top:26%; left:20%; animation-delay:1.3s; width:80px;"></div>
+    <div class="fugaz" style="top:6%;  left:45%; animation-delay:2.4s; width:95px;"></div>
+  </div>
+
+  <div class="jardin-flores" id="tulipanes"></div>
+
+  <div id="textoTocar" class="texto-aviso">Toca un tulipán 🌷</div>
+
+  <div class="mensaje-modal" id="mensajeModal">
+    <div class="mensaje-modal-caja" id="mensajeModalTexto"></div>
+  </div>
+</div>
+
+<script>
+/* =========================================================
+   MENSAJES DE LOS TULIPANES — Editá acá lo que quieras cambiar
+   ---------------------------------------------------------
+   Un mensaje por línea, uno para cada tulipán. La cantidad
+   de mensajes define cuántos tulipanes van a aparecer
+   (podés agregar o quitar líneas libremente).
+   Cada tulipán empieza blanco y se vuelve celeste al tocarlo.
+   Al abrir el último, espera 10 segundos y pasa solo a
+   pagina3.html.
+   ========================================================= */
+const MENSAJES_TULIPANES = [
+  "Ti AMO",
+  "Amo su manera de ser",
+  "Es mi lugar favorito",
+  "Con mi niña el tiempo vuela",
+  "Gracias por elegirme cada día.",
+  "Te amo más que ayer y menos que mañana.",
+  "Cada recuerdo que tengo con mi niña vale mas que todo en el mundo",
+  "Es mi persona favorita",
+  "Con mi niña todo es más fácil",
+  "no hay nadi mas hermosa que mi niña",
+  "Es la que me ase feliz solo con su existencia",
+  "Gracias por tanta paciencia (soy bien irritable)",
+  "nunca me arepentire de nada",
+  "quiero seguir toda la vida con mi niña",
+  "Te amo hoy, mañana y por siempre"
+];
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>

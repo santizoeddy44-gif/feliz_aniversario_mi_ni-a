@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+<title>Nuestro Aniversario</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= PÁGINA 3: carrusel de fotos ================= -->
+<div id="pagina3" class="pagina activa">
+  <div class="carrusel">
+    <div class="carrusel-marco" id="carruselMarco"></div>
+    <div class="carrusel-controles">
+      <button class="flecha" id="flechaIzq">&#8592;</button>
+      <button class="flecha" id="flechaDer">&#8594;</button>
+    </div>
+    <div class="puntos" id="puntos"></div>
+  </div>
+</div>
+
+<script>
+/* =========================================================
+   FOTOS DEL CARRUSEL — Editá acá lo que quieras cambiar
+   ---------------------------------------------------------
+   Poné en "src" el nombre exacto del archivo de tu foto
+   (ej: "foto1.jpg"), y subila a la MISMA carpeta que este
+   archivo (o "fotos/foto1.jpg" si la guardaste en una
+   subcarpeta llamada "fotos"). Se muestra con una etiqueta
+   <img> normal. Mientras "src" esté vacío ("") se ve el
+   color de fondo con el texto como marcador.
+
+   "pos" (opcional): controla qué PARTE de la foto se ve,
+   ya que la imagen se recorta para llenar el marco. Si una
+   foto se ve mal encuadrada, agregá "pos" con uno de estos
+   valores:
+     "center"        (por defecto, recorta desde el centro)
+     "top"           (muestra la parte de arriba)
+     "bottom"        (muestra la parte de abajo)
+     "left" / "right"
+     "20% 80%"       (también aceptan porcentajes: X% Y%)
+   Ejemplo: { src:"foto2.jpg", pos:"top", ... }
+   ========================================================= */
+const FOTOS_CARRUSEL = [
+  { src: "fotos/foto1.jpeg", color: "linear-gradient(135deg,#ff9a9e,#fecfef)", texto: "2 años" },
+  { src: "fotos/foto2.jpeg", color: "linear-gradient(135deg,#a1c4fd,#c2e9fb)", texto: "y ya no la veo igual" },
+  { src: "fotos/foto3.jpeg", color: "linear-gradient(135deg,#ffecd2,#fcb69f)", texto: "ya no siento lo mismo que el primer dia" },
+  { src: "fotos/foto4.jpeg", color: "linear-gradient(135deg,#84fab0,#8fd3f4)", texto: "esos sentimietos" },
+  { src: "fotos/foto5.jpeg", color: "linear-gradient(135deg,#f6d365,#fda085)", texto: "esa forma de ver la cambio", pos: "75% center"   },
+  { src: "fotos/foto6.jpeg", color: "linear-gradient(135deg,#a18cd1,#fbc2eb)", texto: "ahora la miro mucho mas hermosa de lo que era antes" },
+  { src: "fotos/foto7.jpeg", color: "linear-gradient(135deg,#fbc2eb,#a6c1ee)", texto: "y mis sentimientos cada dia crecen mas " },
+  { src: "fotos/foto8.jpeg", color: "linear-gradient(135deg,#96fbc4,#f9f586)", texto: "TI AMO MUCHO mi niña tikita" }
+];
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>
